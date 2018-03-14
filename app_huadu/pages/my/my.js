@@ -28,7 +28,6 @@ Page({
     countdown: '获取验证码',
     timeOut: null, //倒计时时间
     isChange: true,
-    isConfim:false  //是否进入点击修改手机号码
   },
 
   //姓名
@@ -174,16 +173,15 @@ Page({
   changeInfo: function () {
     this.setData({
        inputEdit: false,
-       isConfim : true 
     })
   },
   //个人手机号码修改跳转
   toPhoneJump: function (e) {
     var that = this;
-    if (that.data.isConfim == true) {
+    if (this.data.inputEdit == false) {
       var dataPhone = that.data.phone;
       wx.navigateTo({
-        url: '../phoneJump/phoneJump?phone=' + dataPhone +'&status=0',
+        url: '../phoneJump/phoneJump?status=0',
       })
     }
   },
@@ -288,8 +286,6 @@ Page({
                 orcid: orcid,
                 age: age,
                 sex: sex,
-                //phone:phone,
-                //code: ipnCode,
                 wecha_id: getApp().globalData.wecha_id
               },
               header: {
@@ -308,7 +304,6 @@ Page({
                       'content-type': 'application/x-www-form-urlencoded'
                     },
                     success: function (res) {
-                      //console.log(res)
                       that.setData({
                         username: res.data.user.username,
                         name: res.data.user.username,
@@ -387,7 +382,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    console.log(options)
   },
 
   /**

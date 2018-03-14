@@ -21,10 +21,14 @@
       <image class="info-ico" src="../../img/name.png"></image>
       <input class="input-content" disabled='{{inputEdit}}' value="{{name}}" bindinput='checkName' placeholder='真实姓名'></input>
     </view>
-    <view class="info-input"  bindtap="toPhoneJump">
+    <view class="info-input"  bindtap="toPhoneJump" wx:if="{{inputEdit == false}}">
       <image class="info-ico shouji" src="../../img/shouji.png"></image>
       <input class="input-content" disabled='true' value="{{phone}}" bindinput='checkPhone' placeholder='手机号码'></input>
-      <image  class="confim down" src="../../img/up.png"  wx:if="{{inputEdit == false}}"></image>
+      <image  class="confim down" src="../../img/up.png"></image>
+    </view>
+      <view class="info-input"   wx:if="{{inputEdit == true}}">
+      <image class="info-ico shouji" src="../../img/shouji.png"></image>
+      <input class="input-content" disabled='true' value="{{phone}}" bindinput='checkPhone' placeholder='手机号码'></input>
     </view>
     <view class="info-input">
       <image class="info-ico" src="../../img/IDCard.png"></image>

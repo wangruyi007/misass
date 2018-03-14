@@ -111,7 +111,7 @@ Page({
     var that = this;
     var dataPhone = that.data.phone;
     wx.navigateTo({
-      url: '../phoneJump/phoneJump?phone=' + dataPhone+'&status=1',
+      url: '../phoneJump/phoneJump?status=1',
     })
   },
 
@@ -216,19 +216,6 @@ Page({
         showCancel: false
       })
     } 
-    /*else if (phone == '') {
-      wx.showModal({
-        content: '请填写联系方式',
-        confirmColor: '#29b6f6',
-        showCancel: false
-      })
-    } else if (!regPhone.test(phone)) {
-      wx.showModal({
-        content: '请填写正确的手机号码',
-        confirmColor: '#29b6f6',
-        showCancel: false
-      })
-    } */
     else {
       wx.showLoading({
         title: '提交中',
@@ -270,7 +257,9 @@ Page({
                       wx.showToast({
                         title: '提交成功',
                       })
-                      wx.navigateBack({})
+                      wx.navigateTo({
+                          url:"../my/my"
+                      })
                     }
                   })
                 } else {

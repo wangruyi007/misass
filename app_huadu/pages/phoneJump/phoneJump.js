@@ -18,6 +18,7 @@ Page({
   //获取手机
   getPhone: function (e) {
     var phone1 = trim.trim(e.detail.value);
+    console.log(4564)
     this.setData({
       phone: phone1
     })
@@ -34,14 +35,15 @@ Page({
   //发送验证码到手机
   sendCode: function () {
     var that = this;
+    console.log(that.data.phone)
     var re = /^(0|86|17951)?(13[0-9]|15[012356789]|17[678]|18[0-9]|14[57])[0-9]{8}$/;
-    if (this.data.phone == '') {
+    if (that.data.phone === '') {
       wx.showModal({
         content: '请填写手机号码',
         confirmColor: '#29b6f6',
         showCancel: false
       })
-    } else if (!re.test(this.data.phone)) {
+    } else  if (!re.test(that.data.phone)) {
       wx.showModal({
         content: '请填写正确的手机号码',
         confirmColor: '#29b6f6',
@@ -93,7 +95,6 @@ Page({
       that.setData({
         second: count
       });
-
       if (count == 0) {
         that.setData({
           second: 60,
@@ -107,8 +108,9 @@ Page({
   toIndex: function () {
     var that = this;
     var re = /^(0|86|17951)?(13[0-9]|15[012356789]|17[678]|18[0-9]|14[57])[0-9]{8}$/;
-    var phone = this.data.phone;
-    var code = this.data.code;
+    var phone = that.data.phone;
+    var code = that.data.code;
+    console.log(code)
     if (phone == '') {
       wx.showModal({
         content: '请填写手机号码',
@@ -132,8 +134,8 @@ Page({
         url: 'https://xcx.misass.com/huadu/index.php?s=/api/Commonc/login',
         method: 'POST',
         data: {
-          phone: this.data.phone,
-          code: this.data.code,
+          phone: that.data.phone,
+          code: that.data.code,
           wecha_id: getApp().globalData.wecha_id
         },
         header: {
@@ -155,8 +157,8 @@ Page({
           } else if (res.data.code == '100000') {
             getApp().globalData.phone = that.data.phone;
             if (that.data.status ==0) {
-              wx.navigateBack({
-                delta:1
+              wx.navigateTo({
+                url: "../my/my"
               })
             }  
             if (that.data.status == 1){
@@ -176,7 +178,6 @@ Page({
    */
   onLoad: function (options) {
     this.setData({
-      phone: options.phone,
       status: options.status
     });
   },
