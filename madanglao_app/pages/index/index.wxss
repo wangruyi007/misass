@@ -5,7 +5,7 @@ page{
 .container{
   width: 100%;
   height: 100%;
-  background-color: #c6c6c6;
+  background-color: #f6f2ef;
 }
 .banner{
   width: 100%;
@@ -16,7 +16,6 @@ page{
   display:flex;
   flex:1;
   padding:15rpx 3rpx 0 0;
-  margin-bottom:230rpx;
   height: 100%;
 
 }
@@ -24,10 +23,10 @@ page{
   flex: 0.2;
   display: flex;
   flex-direction: column;
-  height:95%;
+  height:100%;
 }
 .content .ms_left .ms_left_list{
-  border-bottom:1px solid #c6c6c6;
+  margin-bottom:5rpx;
   display:flex;
   justify-content:center;
   align-items:center;
@@ -39,8 +38,9 @@ page{
 }
 .content .ms_left .ms_left_list.active{
   height: 300rpx;
-  background-color:#c6c6c6;
+  background-color:#f6f2ef;
   border-left:15rpx solid #ffc935;
+  color: #ffc935;
 
 }
 .content .ms_left .ms_left_list .ms_left_img{
@@ -52,16 +52,25 @@ page{
 }
 
 .content .ms_right{
-  margin-left: 30rpx;
   flex: 1;
   display: flex;
-  margin-right: 10rpx;
+  margin: 0 10rpx 200rpx 30rpx;
   flex-wrap: wrap;
 }
 .content .ms_right .ms_right_box{
   display: flex;
-  margin-bottom: 10px;
-  background-color: #fff;
+  margin-bottom: 20rpx;
+  background-color: #f6f2ef;
+  flex-direction: column;
+}
+.content .ms_right .ms_right_box>view{
+   display: flex;
+   margin-bottom:20rpx;
+   background-color:#fff;
+
+}
+.content .ms_right .ms_right_box>view:nth-child(2){
+  margin-bottom: 0;
 }
 .content .ms_right .ms_right_box:last-child{
     margin-bottom: 0;
@@ -86,12 +95,13 @@ page{
     display: flex;
     flex-direction: column;
     align-items:flex-end;
-    margin:5px 10px 0 0;
+    margin: 10rpx 10rpx 0 0 ;
+    width: 230rpx;
 }
 .ms_right_price .ms_price_bottom .tea-size{
   display: flex;
   justify-content: flex-start;
-  margin:10rpx 0 10rpx 45rpx;
+  margin:10rpx 15rpx;
 }
 .ms_right_price .ms_price_bottom .tea-size .tea_size_type{
   white-space:nowrap;
@@ -104,7 +114,7 @@ page{
 }
 .ms_right_price .ms_price_bottom .tea-size label{
   display:flex;
-  margin:0 10rpx;
+  margin-left:5rpx;
   border-radius:25px;
 
 }
@@ -121,24 +131,28 @@ page{
 }
 .footer{
   position: fixed;
-  height: 200rpx;
   bottom: 0;
   left: 0;
   right: 0;
   display: flex;
   flex-direction: column;
+  z-index: 99
 }
 .footer .footer-top{
   background-color: #fff;
-  height: 95rpx;
   display: flex;
   justify-content: space-between;
   flex: 1;
+  flex-direction:column;
+}
+.footer .footer-top>view{
+  display: flex;
 }
 .footer .footer-top .footer-top-left{
     line-height:100rpx;
     flex: 2;
-    margin-left: 20rpx
+    margin-left: 20rpx;
+    font-size:30rpx;
 }
 .footer .footer-top .footer-top-right{
     display: flex;
@@ -192,7 +206,7 @@ page{
 .footer .footer-bottom .footer-left .footer-lab .footer-icon{
     width:100rpx;
     height:100rpx;
-    background-color:#0f0f0f;
+    background-color:#060606;
     position:relative;
     top:-25rpx;
     border-radius:40rpx;
@@ -204,7 +218,6 @@ page{
   background-color:#f6f6f6;
   border-radius:50%;
   margin-top:15rpx;
-  margin-left:10rpx;
 }
 .footer .footer-bottom .footer-left .footer-lab .footer-icon .footer-icon-msg{
   position:absolute;
@@ -233,5 +246,18 @@ page{
     line-height:90rpx;
     width:150rpx;
     margin-right:20rpx;
+}
+
+/*蒙版*/
+#mask{
+  height:100%;
+  width:100%;
+  position:absolute;
+  left:0;
+  top:0;
+  right:0;
+  background-color:rgba(0,0,0,.4);
+  z-index:55;
+
 }
 
