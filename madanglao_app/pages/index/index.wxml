@@ -1,4 +1,7 @@
 <!--index.wxml-->
+<view id='mask' wx:if='{{totalDetail}}' bindtap='showDetail'>
+
+</view>
 <view class="container">
     <view class='banner'>{{zise_big}}</view>
     <view class='content'>
@@ -48,31 +51,17 @@
     </view>
     <view class='footer'>
       <view class='footer-top'  wx:if='{{totalDetail}}'>
-           <view>
-            <view class='footer-top-left'>大杯鲜奶抹茶</view>
+           <view wx:for='{{detailArray}}' wx:for-item='detailList' wx:key='*this' wx:if='{{detailList.num>0}}'>
+            <view class='footer-top-left'>{{detailList.name}}</view>
             <view class='footer-top-right'>
                   <view class='footer-top-price'>
                       <text>￥</text>
-                      <text>17</text>
+                      <text>{{detailList.price}}</text>
                   </view>
                   <view class='footer-top-count'>
-                      <text class='del'>-</text>
-                      <input/>
-                      <text class='add'>+</text>
-                  </view>
-            </view>
-          </view>
-          <view>
-            <view class='footer-top-left'>大杯鲜奶抹茶</view>
-            <view class='footer-top-right'>
-                  <view class='footer-top-price'>
-                      <text>￥</text>
-                      <text>17</text>
-                  </view>
-                  <view class='footer-top-count'>
-                      <text class='del'>-</text>
-                      <input/>
-                      <text class='add'>+</text>
+                      <text class='del'  data-index='{{index}}' bindtap='detailMinus'>-</text>
+                      <input value='{{detailList.num}}'/>
+                      <text class='add' data-index='{{index}}' bindtap='detailAdd'>+</text>
                   </view>
             </view>
           </view>
@@ -98,6 +87,4 @@
     </view>
 </view>
 
-<view id='mask' wx:if='{{totalDetail}}' bindtap='showDetail'>
 
-</view>

@@ -177,7 +177,7 @@ page{
   margin-left: 5rpx
 }
 .footer .footer-top .footer-top-right .footer-top-count input{
-  padding-left: 10rpx
+  padding-left: 20rpx
 }
 .footer .footer-top .footer-top-right .footer-top-count .add{
     padding:0px 10rpx 5rpx 10rpx;
