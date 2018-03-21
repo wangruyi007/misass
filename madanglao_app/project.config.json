@@ -9,8 +9,8 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "1.9.91",
-	"appid": "touristappid",
-	"projectname": "%2Fhome%2Fmisass%2F%E6%A1%8C%E9%9D%A2%2Fmadanglao_appp",
+	"appid": "wxebcafc8a5e40888a",
+	"projectname": "mdl_wx-bian",
 	"condition": {
 		"search": {
 			"current": -1,

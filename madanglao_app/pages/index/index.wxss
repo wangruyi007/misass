@@ -9,8 +9,9 @@ page{
 }
 .banner{
   width: 100%;
-  background-color: skyblue;
-  height: 120rpx;
+}
+.slide-image{
+  width: 100%
 }
 .content {
   display:flex;
@@ -39,7 +40,7 @@ page{
 .content .ms_left .ms_left_list.active{
   height: 300rpx;
   background-color:#f6f2ef;
-  border-left:15rpx solid #ffc935;
+  border-left:8rpx solid #ffc935;
   color: #ffc935;
 
 }
@@ -49,6 +50,7 @@ page{
 }
 .content .ms_left .ms_left_list text{
   text-align: center;
+  font-size:36rpx;
 }
 
 .content .ms_right{
@@ -59,7 +61,6 @@ page{
 }
 .content .ms_right .ms_right_box{
   display: flex;
-  margin-bottom: 20rpx;
   background-color: #f6f2ef;
   flex-direction: column;
 }
@@ -69,9 +70,7 @@ page{
    background-color:#fff;
 
 }
-.content .ms_right .ms_right_box>view:nth-child(2){
-  margin-bottom: 0;
-}
+
 .content .ms_right .ms_right_box:last-child{
     margin-bottom: 0;
 }
@@ -129,6 +128,13 @@ page{
   border-radius:50%;
   margin-left:5rpx;
 }
+/* .ms_right_price .ms_price_bottom .tea-size .tea_size_add::after{
+  content: "+";
+  background-color: #ffc935;
+  width: 10rpx;
+  height: 10rpx;
+} */
+
 .footer{
   position: fixed;
   bottom: 0;

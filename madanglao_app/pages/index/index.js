@@ -3,6 +3,16 @@
 const app = getApp()
 Page({
   data: {
+    imgUrls: [
+      'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
+      'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg',
+      'http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg'
+    ],
+    indicatorDots: true,
+    autoplay: true,
+    interval: 2000,
+    duration: 1000,
+     activeColor: '#ffc935',
     char_lt:">",    //选好了的符号
     array:[
       {
@@ -84,20 +94,23 @@ Page({
                 del: '-',
                 num: 0,
                 add: '+',
-                monty:''
+                monty: '',
+                money: 22
               },
               {
                 cupZize: '中杯',
                 del: '-',
                 num: 0,
                 add: '+',
-                monty: ''
+                monty: '',
+                money: 19
               },
               {
                 cupZize: '小杯',
                 del: '-',
                 num: 0,
-                add: '+'
+                add: '+',
+                money: 17
               }
             ]
           },
@@ -113,19 +126,22 @@ Page({
                 cupZize: '大杯',
                 del: '-',
                 num: 0,
-                add: '+'
+                add: '+',
+                money: 22
               },
               {
                 cupZize: '中杯',
                 del: '-',
                 num: 0,
-                add: '+'
+                add: '+',
+                money: 19
               },
               {
                 cupZize: '小杯',
                 del: '-',
                 num: 0,
-                add: '+'
+                add: '+',
+                money: 17
               }
             ]
           },
@@ -141,19 +157,22 @@ Page({
                 cupZize: '大杯',
                 del: '-',
                 num: 0,
-                add: '+'
+                add: '+',
+                money: 22
               },
               {
                 cupZize: '中杯',
                 del: '-',
                 num: 0,
-                add: '+'
+                add: '+',
+                money: 19
               },
               {
                 cupZize: '小杯',
                 del: '-',
                 num: 0,
-                add: '+'
+                add: '+',
+                money: 17
               }
             ]
           },
@@ -169,19 +188,22 @@ Page({
                 cupZize: '大杯',
                 del: '-',
                 num: 0,
-                add: '+'
+                add: '+',
+                money:22
               },
               {
                 cupZize: '中杯',
                 del: '-',
                 num: 0,
-                add: '+'
+                add: '+',
+                money: 19
               },
               {
                 cupZize: '小杯',
                 del: '-',
                 num: 0,
-                add: '+'
+                add: '+',
+                money: 17
               }
             ]
           },
@@ -197,19 +219,22 @@ Page({
                 cupZize: '大杯',
                 del: '-',
                 num: 0,
-                add: '+'
+                add: '+',
+                money: 22
               },
               {
                 cupZize: '中杯',
                 del: '-',
                 num: 0,
-                add: '+'
+                add: '+',
+                money: 19
               },
               {
                 cupZize: '小杯',
                 del: '-',
                 num: 0,
-                add: '+'
+                add: '+',
+                money:17
               }
             ]
           },
@@ -225,19 +250,22 @@ Page({
                 cupZize: '大杯',
                 del: '-',
                 num: 0,
-                add: '+'
+                add: '+',
+                money: 22
               },
               {
                 cupZize: '中杯',
                 del: '-',
                 num: 0,
-                add: '+'
+                add: '+',
+                money: 19
               },
               {
                 cupZize: '小杯',
                 del: '-',
                 num: 0,
-                add: '+'
+                add: '+',
+                money: 17
               }
             ]
           },
@@ -253,19 +281,22 @@ Page({
                 cupZize: '大杯',
                 del: '-',
                 num: 0,
-                add: '+'
+                add: '+',
+                money: 22
               },
               {
                 cupZize: '中杯',
                 del: '-',
                 num: 0,
-                add: '+'
+                add: '+',
+                money: 19
               },
               {
                 cupZize: '小杯',
                 del: '-',
                 num: 0,
-                add: '+'
+                add: '+',
+                money: 17
               }
             ]
           },
@@ -281,19 +312,22 @@ Page({
                 cupZize: '大杯',
                 del: '-',
                 num: 0,
-                add: '+'
+                add: '+',
+                money: 22
               },
               {
                 cupZize: '中杯',
                 del: '-',
                 num: 0,
-                add: '+'
+                add: '+',
+                money: 19
               },
               {
                 cupZize: '小杯',
                 del: '-',
                 num: 0,
-                add: '+'
+                add: '+',
+                money: 17
               }
             ]
           }
@@ -314,19 +348,22 @@ Page({
                 cupZize: '大杯',
                 del: '-',
                 num: 0,
-                add: '+'
+                add: '+',
+                money: 22
               },
               {
                 cupZize: '中杯',
                 del: '-',
                 num: 0,
-                add: '+'
+                add: '+',
+                money: 19
               },
               {
                 cupZize: '小杯',
                 del: '-',
                 num: 0,
-                add: '+'
+                add: '+',
+                money: 17
               }
             ]
           },
@@ -342,19 +379,22 @@ Page({
                 cupZize: '大杯',
                 del: '-',
                 num: 0,
-                add: '+'
+                add: '+',
+                money: 22
               },
               {
                 cupZize: '中杯',
                 del: '-',
                 num: 0,
-                add: '+'
+                add: '+',
+                money: 19
               },
               {
                 cupZize: '小杯',
                 del: '-',
                 num: 0,
-                add: '+'
+                add: '+',
+                money: 17
               }
             ]
           }
@@ -375,19 +415,22 @@ Page({
                 cupZize: '大杯',
                 del: '-',
                 num: 0,
-                add: '+'
+                add: '+',
+                money: 22
               },
               {
                 cupZize: '中杯',
                 del: '-',
                 num: 0,
-                add: '+'
+                add: '+',
+                money: 19
               },
               {
                 cupZize: '小杯',
                 del: '-',
                 num: 0,
-                add: '+'
+                add: '+',
+                money: 17
               }
             ]
           },
@@ -403,19 +446,22 @@ Page({
                 cupZize: '大杯',
                 del: '-',
                 num: 0,
-                add: '+'
+                add: '+',
+                money: 22
               },
               {
                 cupZize: '中杯',
                 del: '-',
                 num: 0,
-                add: '+'
+                add: '+',
+                money: 19
               },
               {
                 cupZize: '小杯',
                 del: '-',
                 num: 0,
-                add: '+'
+                add: '+',
+                money: 17
               }
             ]
           }
@@ -437,19 +483,22 @@ Page({
                 cupZize: '大杯',
                 del: '-',
                 num: 0,
-                add: '+'
+                add: '+',
+                money: 22
               },
               {
                 cupZize: '中杯',
                 del: '-',
                 num: 0,
-                add: '+'
+                add: '+',
+                money: 19
               },
               {
                 cupZize: '小杯',
                 del: '-',
                 num: 0,
-                add: '+'
+                add: '+',
+                money: 17
               }
             ]
           },
@@ -465,19 +514,22 @@ Page({
                 cupZize: '大杯',
                 del: '-',
                 num: 0,
-                add: '+'
+                add: '+',
+                money: 22
               },
               {
                 cupZize: '中杯',
                 del: '-',
                 num: 0,
-                add: '+'
+                add: '+',
+                money: 19
               },
               {
                 cupZize: '小杯',
                 del: '-',
                 num: 0,
-                add: '+'
+                add: '+',
+                money: 17
               }
             ]
           }
@@ -498,19 +550,22 @@ Page({
                 cupZize: '大杯',
                 del: '-',
                 num: 0,
-                add: '+'
+                add: '+',
+                money: 22
               },
               {
                 cupZize: '中杯',
                 del: '-',
                 num: 0,
-                add: '+'
+                add: '+',
+                money: 19
               },
               {
                 cupZize: '小杯',
                 del: '-',
                 num: 0,
-                add: '+'
+                add: '+',
+                money: 17
               }
             ]
           },
@@ -526,19 +581,22 @@ Page({
                 cupZize: '大杯',
                 del: '-',
                 num: 0,
-                add: '+'
+                add: '+',
+                money: 22
               },
               {
                 cupZize: '中杯',
                 del: '-',
                 num: 0,
-                add: '+'
+                add: '+',
+                money: 19
               },
               {
                 cupZize: '小杯',
                 del: '-',
                 num: 0,
-                add: '+'
+                add: '+',
+                money: 17
               }
             ]
           }
@@ -560,38 +618,37 @@ Page({
     detailNum:0,                //价格详情的数目
     detailArray:[]
   },
-  jumpTo:function(e){         //跳转到具体的值
+  jumpTo:function(e){         //跳转到具体的页面导航
     // 获取标签元素上自定义的 data-opt 属性的值
-    let target = e.currentTarget.dataset.opt;
+    let target = e.currentTarget.dataset.opt;   //list+*index
     this.setData({
       toView: target,
       crlTure:true,
-      ifIndex: target.split("t")[1]
+      ifIndex: target.split("t")[1]            //字符串切割获取
     })
   },
   //计算总的数量
   getTotalPrice() {
     let that = this;
-    let teaArray = this.data.teaArray;                                     // 获取数据列表   
+    let teaArray = this.data.teaArray;                                           // 获取数据列表   
     let detailArray = this.data.detailArray;                                     // 获取数据列表
-    // console.log(detailArray)
     let len = 0;
     let totalNum = 0
     let numTotal = 0, totalPrice = 0;
     for (let i = 0; i < teaArray.length; i++) {                            // 循环列表得到每个数据   第一层遍历
       for (let j = 0; j < teaArray[i].listArr.length; j++) {               //循环列表得到每个数据   第二层遍历
         for (let k = 0; k < teaArray[i].listArr[j].sizeArr.length; k++) {  //循环列表得到每个数据   第三层遍历
-         numTotal += teaArray[i].listArr[j].sizeArr[k].num;                //进行总额相加
-         totalPrice += teaArray[i].listArr[j].sizeArr[k].num * teaArray[i].listArr[j].money    // 假设价格一致
+        //  numTotal += teaArray[i].listArr[j].sizeArr[k].num;                //进行总额相加
+        //  totalPrice += teaArray[i].listArr[j].sizeArr[k].num * teaArray[i].listArr[j].money    // 假设价格一致
+        totalPrice += teaArray[i].listArr[j].sizeArr[k].num * teaArray[i].listArr[j].sizeArr[k].money    // 不一致时候需要更改数据
          for (let a = 0; len = detailArray.length, a < len; a++) {
-           // console.log(detailArray[a].name.split('杯'))
-           if (detailArray[a].name.split('杯')[1] == teaArray[i].listArr[j].teaName){
+           if (detailArray[a].name.split('杯')[1] == teaArray[i].listArr[j].teaName){    //切割生成的价格详情名字
              if (detailArray[a].name.split('杯')[0] + "杯" == teaArray[i].listArr[j].sizeArr[k].cupZize){
                teaArray[i].listArr[j].sizeArr[k].num = detailArray[a].num ;
             }
            }
          }
-        // totalPrice += teaArray[i].listArr[j].sizeArr[k].num * teaArray[i].listArr[j].sizeArr[k].money    // 不一致时候需要更改数据
+       
         }
       }
     }
@@ -604,7 +661,7 @@ Page({
       that.setData({ 
         priceCar: true
       })
-    }
+    } 
     that.setData({                                                         // 最后赋值到data中渲染到页面
       numTotal: numTotal,                                                  //总数量
       totalPrice: totalPrice.toFixed(2),                                    //总价格
@@ -636,7 +693,8 @@ Page({
     teaArray[i].listArr[j].sizeArr[index].num = num;         //赋值给具体杯型的数量 
     detailArray.push({
         name: teaArray[i].listArr[j].sizeArr[index].cupZize + teaArray[i].listArr[j].teaName,
-        price: teaArray[i].listArr[j].money,
+        //price: teaArray[i].listArr[j].money,    //价格一致时候
+        price: teaArray[i].listArr[j].sizeArr[index].money,    //价格一致时候
         num: teaArray[i].listArr[j].sizeArr[index].num
     })
     function arrayUnique(arr, name) {      //去重数组  保留添加那个
@@ -668,10 +726,12 @@ Page({
     teaArray[i].listArr[j].sizeArr[index].num = num;         //赋值给具体杯型的数量 
     detailArray.push({
       name: teaArray[i].listArr[j].sizeArr[index].cupZize + teaArray[i].listArr[j].teaName,
-      price: teaArray[i].listArr[j].money,
+      //price: teaArray[i].listArr[j].money,                 //价格一致时候
+      price: teaArray[i].listArr[j].sizeArr[index].money,    //价格不一致时候
       num: teaArray[i].listArr[j].sizeArr[index].num
     })
-    function arrayUnique(arr, name) {      //去重数组  保留添加那个
+    console.log(detailArray)
+    function arrayUnique(arr, name) {              //去重数组  保留添加那个
       let hash = {};
       return arr.reduce(function (item, next) {
         hash[next[name]] ? '' : hash[next[name]] = true && item.push(next);
