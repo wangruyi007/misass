@@ -1,9 +1,7 @@
 <!--index.wxml-->
 <view id='mask' wx:if='{{totalDetail}}' bindtap='showDetail'>
- 
 </view>
 <view class="container">
-<!-- <view class='abc iconfontO icon-add'>555</view>  -->
     <!-- <view class='banner'>
             <swiper indicator-dots="{{indicatorDots}}"
                       autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}"  indicator-active-color="{{activeColor}}" circular="true">555</view>
@@ -76,9 +74,10 @@
                       <text>{{detailList.price}}</text>
                   </view>
                   <view class='footer-top-count'>
-                      <text class='del'  data-index='{{index}}' bindtap='detailMinus'>-</text>
-                      <input value='{{detailList.num}}'/>
-                      <text class='add' data-index='{{index}}' bindtap='detailAdd'>+</text>
+                      <text class='del iconfontO icon-minus'  data-index='{{index}}' bindtap='detailMinus'></text>
+                      <!-- <input value='{{detailList.num}}'/> -->
+                      <text class='textvul'>{{detailList.num}}</text>
+                      <text class='add iconfont icon-add1' data-index='{{index}}' bindtap='detailAdd'></text>
                   </view>
             </view>
           </view>

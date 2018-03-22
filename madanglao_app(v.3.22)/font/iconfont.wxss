@@ -27,10 +27,13 @@
 .icon-add:before { 
       content: "\e654"; 
       position: relative;
-      top: -3rpx;
+      top: -2rpx;
   }
 
 .icon-minus:before {
    content: "\e673";
+  }
+.icon-add1:before { 
+      content: "\e654"; 
   }
 

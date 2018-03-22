@@ -10,7 +10,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "1.9.91",
 	"appid": "wxebcafc8a5e40888a",
-	"projectname": "mdl_wx-bian",
+	"projectname": "wx_mdl_bian",
 	"condition": {
 		"search": {
 			"current": -1,
