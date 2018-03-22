@@ -1,6 +1,11 @@
 /**index.wxss**/
+@import "../../font/iconfont.wxss";
 page{
   height: 100%;
+}
+.abc{
+  height: 20rpx;
+  margin: 20rpx 0 2000rpx
 }
 .container{
   width: 100%;
@@ -83,7 +88,7 @@ page{
   width: 200rpx;
   height: 200rpx;
   background-color: #fff;
-  padding: 0 0 20rpx 80rpx;
+  padding:0 20rpx 20rpx 20rpx;
 }
 .ms_right_price{
   display: flex;
@@ -97,44 +102,39 @@ page{
     margin: 10rpx 10rpx 0 0 ;
     width: 230rpx;
 }
+.ms_right_price .ms_price_bottom{
+  padding-bottom: 20rpx;
+  
+}
 .ms_right_price .ms_price_bottom .tea-size{
   display: flex;
   justify-content: flex-start;
-  margin:10rpx 15rpx;
+  padding-bottom:15rpx;
 }
 .ms_right_price .ms_price_bottom .tea-size .tea_size_type{
-  white-space:nowrap;
-  font-size:13px;
-  display:flex;
-  align-items:center;
+  white-space:nowrap; 
+  font-size:30rpx;
+  padding:2rpx 0;
 }
 .ms_right_price .ms_price_bottom .tea-size .tea_size_num{
-  border: 1px solid #e3c97f;
+   border: 2rpx solid #e3c97f; 
 }
 .ms_right_price .ms_price_bottom .tea-size label{
   display:flex;
-  margin-left:5rpx;
-  border-radius:25px;
-
+  border-radius:30rpx;
+  height:37rpx;
+  margin-left: 10rpx;
+  position: relative;
+  top:5rpx;
+}
+.ms_right_price .ms_price_bottom .tea-size .tea_size_num .tea_size_text{
+    padding-left:5px;
+    width:60rpx;
+    font-size:30rpx;
 }
 .ms_right_price .ms_price_bottom .tea-size .tea_size_num .tea_size_min{
-  padding:0px 10rpx 5rpx 10rpx;
-  border-radius:50%;
-  margin:0 7rpx;
-}
-.ms_right_price .ms_price_bottom .tea-size .tea_size_add{
-  padding:0px 10rpx 5rpx 10rpx;
-  background-color:#ffc935;
-  border-radius:50%;
-  margin-left:5rpx;
-}
-/* .ms_right_price .ms_price_bottom .tea-size .tea_size_add::after{
-  content: "+";
-  background-color: #ffc935;
-  width: 10rpx;
-  height: 10rpx;
-} */
-
+  margin-left: 5rpx
+} 
 .footer{
   position: fixed;
   bottom: 0;

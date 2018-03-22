@@ -1,8 +1,12 @@
 <!--index.wxml-->
 <view id='mask' wx:if='{{totalDetail}}' bindtap='showDetail'>
-
+ 
 </view>
 <view class="container">
+<!-- <view class='abc iconfontO icon-add'>555</view>  -->
+    <!-- <view class='banner'>
+            <swiper indicator-dots="{{indicatorDots}}"
+                      autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}"  indicator-active-color="{{activeColor}}" circular="true">555</view>
     <!-- <view class='banner'>
         <swiper indicator-dots="{{indicatorDots}}"
           autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}"  indicator-active-color="{{activeColor}}" circular="true">
@@ -46,9 +50,13 @@
                                                 <view class='tea-size' wx:for="{{list.sizeArr}}" wx:for-item="siezArr" wx:key="*this">
                                                   <text class='tea_size_type'>{{siezArr.cupZize}}</text>
                                                   <label class='{{siezArr.num<1?"":"tea_size_num"}}'>
-                                                    <text class='tea_size_min' hidden ="{{siezArr.num<1}}" bindtap='minusCount' data-lis='{{lis.aId}}' data-lit='{{list.sizeId}}'  data-index='{{index}}'>{{siezArr.del}}</text>
-                                                    <input  type='number' hidden ="{{siezArr.num<1}}"  value='{{siezArr.num}}'/>
-                                                    <text class='tea_size_add'  bindtap="addCount" data-lis='{{lis.aId}}' data-lit='{{list.sizeId}}' data-index="{{index}}">{{siezArr.add}}</text>
+                                                  <text class='tea_size_min iconfontO icon-minus' hidden ="{{siezArr.num<1}}" 
+                                                         bindtap='minusCount' data-lis='{{lis.aId}}' 
+                                                         data-lit='{{list.sizeId}}'  data-index='{{index}}'></text>
+                                                    <text class='tea_size_text' hidden ="{{siezArr.num<1}}">{{siezArr.num}}</text>
+                                                    <text class='tea_size_add iconfont icon-add'  
+                                                          bindtap="addCount" data-lis='{{lis.aId}}' data-lit='{{list.sizeId}}'
+                                                          data-index="{{index}}"></text>
                                                   </label>
                                                 </view> 
                                             </view>

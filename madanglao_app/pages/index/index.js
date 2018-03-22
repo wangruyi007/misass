@@ -652,20 +652,16 @@ Page({
         }
       }
     }
-    // console.log(teaArray)
     if (numTotal == 0){                                                     //当总数为0时候   隐藏购物车
       that.setData({   
         priceCar: false
-      })
-    }else{
-      that.setData({ 
-        priceCar: true
       })
     } 
     that.setData({                                                         // 最后赋值到data中渲染到页面
       numTotal: numTotal,                                                  //总数量
       totalPrice: totalPrice.toFixed(2),                                    //总价格
-      teaArray:teaArray,
+      teaArray: teaArray, 
+      priceCar: true
     });
   },
  //点击蒙版时候让总价详情隐藏
@@ -730,7 +726,6 @@ Page({
       price: teaArray[i].listArr[j].sizeArr[index].money,    //价格不一致时候
       num: teaArray[i].listArr[j].sizeArr[index].num
     })
-    console.log(detailArray)
     function arrayUnique(arr, name) {              //去重数组  保留添加那个
       let hash = {};
       return arr.reduce(function (item, next) {
@@ -767,7 +762,7 @@ Page({
         priceCar: false,
         totalDetail:false
       })
-    } else {
+    }else {
       that.setData({
         priceCar: true,
       })
@@ -804,11 +799,6 @@ Page({
     this.getDetailPrice();
     
   },
-
-
-
-
-
   //显示具体详情总价
   jumpTotal:function(e){
     let that = this;
